@@ -39,3 +39,15 @@ model Post {
 
   @@map("posts")
 }
+
+model Event {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  name           String
+  officeLocationId String  // Store the Office ObjectId here
+  description    String
+  tags           String[]
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@map("events")
+}
