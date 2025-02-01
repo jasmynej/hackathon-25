@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@azure/service-bus": "^7.9.5",
     "@prisma/client": "^6.3.0",
+    "axios": "^1.7.9",
     "next": "15.1.6",
     "prisma": "^6.3.0",
     "react": "^19.0.0",

@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
         remotePatterns: [
             {
                 protocol: "https",
-                hostname: "https://psemployeeapp.blob.core.windows.net",
-                pathname:"/**/**"
+                hostname: "psemployeeapp.blob.core.windows.net",
+                pathname:"/announcement-images/**"
             }
         ]
     }
