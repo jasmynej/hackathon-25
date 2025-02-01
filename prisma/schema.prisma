@@ -20,10 +20,11 @@ model Office {
 }
 
 model Announcement {
-  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
   title     String
   content   String
   imageName String
+  createdAt DateTime @default(now())
 
   @@map("announcements")
 }
