@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@azure/service-bus": "^7.9.5",
+    "@clerk/nextjs": "^6.10.6",
     "@prisma/client": "^6.3.0",
     "axios": "^1.7.9",
     "next": "15.1.6",
