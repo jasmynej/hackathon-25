@@ -29,25 +29,54 @@ model Announcement {
   @@map("announcements")
 }
 
-model Post {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  userId    String
-  title     String
-  content   String
-  images    String[]
-  createdAt DateTime @default(now())
-
-  @@map("posts")
-}
-
 model Event {
-  id             String   @id @default(auto()) @map("_id") @db.ObjectId
-  name           String
-  officeLocationId String  // Store the Office ObjectId here
-  description    String
-  tags           String[]
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  name             String
+  officeLocationId String // Store the Office ObjectId here
+  description      String
+  tags             String[]
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
 
   @@map("events")
+}
+
+model Resource {
+  id         String       @id @default(auto()) @map("_id") @db.ObjectId
+  userId     String
+  title      String
+  desc       String?
+  type       ResourceType
+  contentUrl String
+  isPublic   Boolean
+  tags       String[]
+  createdAt  DateTime     @default(now())
+
+  interactions Interaction[]
+
+  @@map("resources")
+}
+
+model Interaction {
+  id         String          @id @default(auto()) @map("_id") @db.ObjectId
+  userId     String
+  resourceId String          @db.ObjectId
+  type       InteractionType
+  content    String?
+  createdAt  DateTime        @default(now())
+
+  resource Resource @relation(fields: [resourceId], references: [id])
+
+  @@map("interactions")
+}
+
+enum ResourceType {
+  FILE
+  IMAGE
+  LINK
+}
+
+enum InteractionType {
+  LIKE
+  COMMENT
 }

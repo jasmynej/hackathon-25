@@ -13,6 +13,8 @@ export async function uploadToAzureBlob(containerName: string, file: File, blobN
         blobHTTPHeaders: { blobContentType: file.type },
     });
 
+    const fileUrl = blockBlobClient.url;
+    return fileUrl;
 
 }
 
