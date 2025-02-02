@@ -33,9 +33,8 @@ export default function DashboardPage() {
                 </div>
             </div>
 
-            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+            <Modal isOpen={isModalOpen} onCloseAction={() => setIsModalOpen(false)}>
                 <CreateResource/>
-                <button onClick={() => setIsModalOpen(false)}>Close</button>
             </Modal>
         </div>
     )

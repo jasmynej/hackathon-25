@@ -13,7 +13,7 @@ export default function AnnouncementCard({Announcement}: {Announcement: Announce
        <div className={itemStyles.feedItem} onClick={() => setIsModalOpen(true)}>
           {Announcement.title}
 
-           <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+           <Modal isOpen={isModalOpen} onCloseAction={() => setIsModalOpen(false)}>
 
                 <h1>{Announcement.title}</h1>
                 <p>{Announcement.content}</p>

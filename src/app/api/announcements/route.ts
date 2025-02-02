@@ -5,7 +5,10 @@ import {uploadToAzureBlob} from "@/app/lib/fileUpload";
 const containerName = 'announcement-images';
 export async function GET() {
     try {
-        const allAnnouncements = await prisma.announcement.findMany();
+        const allAnnouncements = await prisma.announcement.findMany({
+            take: 5,
+            orderBy: { createdAt: 'desc' }
+        });
         return NextResponse.json(allAnnouncements);
 
     }

@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
             {
                 protocol: "https",
                 hostname: "psemployeeapp.blob.core.windows.net",
-                pathname:"/posts/**"
+                pathname:"/resources/**"
             }
         ]
     }

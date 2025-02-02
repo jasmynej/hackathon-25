@@ -4,17 +4,17 @@ import React from 'react';
 
 interface ModalProps {
     isOpen: boolean;
-    onClose: () => void;
+    onCloseAction: () => void;
     children: React.ReactNode;
 }
 
-export default function Modal({ isOpen, onClose, children }: ModalProps) {
+export default function Modal({ isOpen, onCloseAction, children }: ModalProps) {
     if (!isOpen) return null;
 
     return (
-        <div style={overlayStyle} onClick={onClose}>
+        <div style={overlayStyle} onClick={onCloseAction}>
             <div style={modalStyle} onClick={(e) => e.stopPropagation()}>
-                <button style={closeButtonStyle} onClick={onClose}>✖</button>
+                <button style={closeButtonStyle} onClick={onCloseAction}>✖</button>
                 {children}
             </div>
         </div>
