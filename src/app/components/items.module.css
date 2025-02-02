@@ -13,5 +13,11 @@
     color:white;
     text-align: center;
     font-size: 10px;
+    margin: 5px;
 }
 
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}

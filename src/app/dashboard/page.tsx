@@ -27,7 +27,6 @@ export default function DashboardPage() {
                     <Link href="/dashboard/events">
                         <Image src="/eventsWidget.svg" alt="lib" width='350' height={267}/>
                     </Link>
-                    <Image src="/eventsWidget.svg" alt="lib" width='350' height={267}/>
                     <Image src="/networking.svg" alt="networking" width='350' height={267}/>
                     <Image src="/coreValues.svg" alt="networking" width='350' height={235} />
                 </div>
