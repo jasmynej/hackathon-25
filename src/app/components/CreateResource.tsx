@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-
+import formStyles from './forms.module.css';
 export default function CreateResource() {
     const [formData, setFormData] = useState({
         title: '',
@@ -70,7 +70,7 @@ export default function CreateResource() {
     };
 
     return (
-        <form onSubmit={handleSubmit} style={{ maxWidth: '400px', margin: 'auto' }}>
+        <form onSubmit={handleSubmit} style={{ maxWidth: '400px', margin: 'auto' }} className={formStyles.resourceForm}>
             <h1>Create Resource</h1>
             <input
                 name="title"
@@ -78,6 +78,7 @@ export default function CreateResource() {
                 value={formData.title}
                 onChange={handleChange}
                 required
+                className={formStyles.formInput}
             />
             <textarea
                 name="description"
@@ -85,23 +86,27 @@ export default function CreateResource() {
                 value={formData.description}
                 onChange={handleChange}
                 required
+                className={formStyles.formInput}
             />
             <input
                 name="file"
                 type="file"
                 onChange={handleChange}
+                className={formStyles.formInput}
             />
             <input
                 name="link"
                 placeholder="Link (optional)"
                 value={formData.link}
                 onChange={handleChange}
+                className={formStyles.formInput}
             />
             <select
                 name="type"
                 value={formData.type}
                 onChange={handleChange}
                 required
+                className={formStyles.formInput}
             >
                 <option value="">Select Type</option>
                 <option value="LINK">Link</option>
@@ -121,6 +126,7 @@ export default function CreateResource() {
                 name="tags"
                 placeholder="Tags (comma-separated)"
                 onChange={handleTags}
+                className={formStyles.formInput}
             />
 
             <button type="submit">Share Resource</button>

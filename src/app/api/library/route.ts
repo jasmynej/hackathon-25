@@ -3,10 +3,20 @@ import {prisma} from "@/app/lib/prisma_db";
 import {ResourceType} from "@prisma/client";
 import {uploadToAzureBlob} from "@/app/lib/fileUpload";
 
-export async function GET(){
+export async function GET(req: NextRequest){
     try {
-        const allResources = await prisma.resource.findMany()
-        return NextResponse.json(allResources);
+        const { searchParams } = new URL(req.url);
+        const limit = parseInt(searchParams.get('limit') || '10', 10);
+
+        const resources = await prisma.resource.findMany({
+            take: limit,
+            orderBy: { createdAt: 'desc' },
+            where :{
+                isPublic: true
+            }
+        });
+
+        return NextResponse.json(resources);
     }
     catch (e) {
         console.error(e)
