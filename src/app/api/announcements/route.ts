@@ -1,6 +1,6 @@
 import {NextResponse, NextRequest} from "next/server";
 import {prisma} from "@/app/lib/prisma_db";
-import {uploadToAzureBlob} from "@/app/lib/imageUpload";
+import {uploadToAzureBlob} from "@/app/lib/fileUpload";
 
 const containerName = 'announcement-images';
 export async function GET() {
