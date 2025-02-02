@@ -10,6 +10,8 @@
 .feedContent {
     padding:30px;
     margin-top: 50px;
+    overflow: auto;
+   height: 300px;
 }
 
 .announcementContainer {
