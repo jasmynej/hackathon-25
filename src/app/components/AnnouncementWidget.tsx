@@ -26,9 +26,9 @@ export default function AnnouncementWidget () {
 
     return (
         <div className={widgetStyles.announcementContainer}>
-
+            <div onClick={() => setIsModalOpen(true)} className={widgetStyles.createBtn}>Create</div>
             <div className={widgetStyles.announcements}>
-                <div onClick={() => setIsModalOpen(true)}>Create</div>
+
                 {
                     announcements.map((a) => {
                         return (
@@ -37,9 +37,8 @@ export default function AnnouncementWidget () {
                     })
                 }
             </div>
-            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+            <Modal isOpen={isModalOpen} onCloseAction={() => setIsModalOpen(false)}>
                 <CreateAnnouncement/>
-                <button onClick={() => setIsModalOpen(false)}>Close</button>
             </Modal>
         </div>
     )

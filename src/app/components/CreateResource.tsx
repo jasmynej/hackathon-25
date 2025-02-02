@@ -47,7 +47,7 @@ export default function CreateResource() {
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
+        // e.preventDefault();
         const data = new FormData();
 
         Object.entries(formData).forEach(([key, value]) => {
