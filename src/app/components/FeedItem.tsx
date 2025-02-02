@@ -1,5 +1,4 @@
 'use client'
-import { faker } from '@faker-js/faker';
 import {Resource} from "@prisma/client";
 import itemStyles from './items.module.css'
 import {useEffect, useState} from "react";
