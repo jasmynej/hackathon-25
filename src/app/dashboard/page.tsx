@@ -6,6 +6,7 @@ import AnnouncementWidget from "@/app/components/AnnouncementWidget";
 import Modal from "@/app/components/Modal";
 import {useState} from "react";
 import CreateResource from "@/app/components/CreateResource";
+import Link from 'next/link';
 export default function DashboardPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     return (
@@ -23,6 +24,9 @@ export default function DashboardPage() {
                 </div>
                 <div className={dashStyle.dashCol}>
                     <Image src="/wrapUp.svg" alt="lib" width='350' height={126}/>
+                    <Link href="/dashboard/events">
+                        <Image src="/eventsWidget.svg" alt="lib" width='350' height={267}/>
+                    </Link>
                     <Image src="/eventsWidget.svg" alt="lib" width='350' height={267}/>
                     <Image src="/networking.svg" alt="networking" width='350' height={267}/>
                     <Image src="/coreValues.svg" alt="networking" width='350' height={235} />
