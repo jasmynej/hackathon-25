@@ -11,9 +11,9 @@ import {
 
 export default function NavBar() {
     return (
-        <div className={navStyle.navBarContainer}>
+        <div className="flex justify-between items-center p-2 pr-3 shadow">
             <div className={navStyle.logoBox}>
-                <Image src='/logo.svg' alt="Logo" width={100} height={50} />
+                <Image src='/logo.svg' alt="Logo" width={50} height={50} />
                 <h2>Momentum</h2>
             </div>
             <div className={navStyle.navItems}>
