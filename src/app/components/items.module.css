@@ -1,0 +1,17 @@
+.feedItem span {
+    color: #079fff;
+}
+.feedItem {
+    border-bottom: #b4b4b4 solid 3px;
+    padding: 10px;
+}
+.itemType {
+    background-color: #ffe63b;
+    border-radius: 20px;
+    padding: 5px;
+    width: 30px;
+    color:white;
+    text-align: center;
+    font-size: 10px;
+}
+

@@ -1,0 +1,28 @@
+.feedContainer {
+    width: 665px;
+    height: 425px;
+    background-image: url("/feed.svg");
+    background-size: contain;          /* Adjusts image size */
+    background-repeat: no-repeat;      /* Prevents tiling */
+    background-position: center;
+}
+
+.feedContent {
+    padding:30px;
+    margin-top: 50px;
+}
+
+.announcementContainer {
+    width:350px;
+    height: 270px;
+    background-image: url("/anmntsWidget.svg");
+    background-size: contain;          /* Adjusts image size */
+    background-repeat: no-repeat;      /* Prevents tiling */
+    background-position: center;
+}
+
+.announcements {
+    padding:15px;
+    margin-top: 25px;
+    overflow: auto;
+}

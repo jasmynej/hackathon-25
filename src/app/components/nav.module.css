@@ -1,0 +1,37 @@
+
+.navBarContainer {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logoBox h2 {
+    color: #fe414d;
+}
+
+.navItems {
+    display: flex;
+    flex-direction: row;
+    gap:3px;
+    align-items: center;
+}
+
+.navItems div {
+    display: flex;
+    border-radius: 100%;
+    background-color: #F5F7FA;
+    color: #464246;
+    padding:5px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}

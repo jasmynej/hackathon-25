@@ -1,0 +1,28 @@
+.resourceForm {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.resourceForm h1 {
+    text-align: center;
+}
+
+.formInput {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.resourceForm button {
+    background-color: #079fff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.resourceForm button:hover {
+    background-color: #098dda;
+}

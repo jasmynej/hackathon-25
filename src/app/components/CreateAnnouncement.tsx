@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
+import formStyles from './forms.module.css';
 
 export default function CreateAnnouncement() {
     const [title, setTitle] = useState("");
@@ -33,7 +34,7 @@ export default function CreateAnnouncement() {
     };
 
     return (
-        <form onSubmit={handleSubmit} style={{ maxWidth: "400px", margin: "auto" }}>
+        <form onSubmit={handleSubmit} style={{ maxWidth: '400px', margin: 'auto' }} className={formStyles.resourceForm}>
             <h2>Create Announcement</h2>
             <input
                 type="text"
@@ -41,17 +42,20 @@ export default function CreateAnnouncement() {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 required
+                className={formStyles.formInput}
             />
             <textarea
                 placeholder="Content"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
                 required
+                className={formStyles.formInput}
             />
             <input
                 type="file"
                 onChange={(e) => setFile(e.target.files?.[0] || null)}
                 required
+                className={formStyles.formInput}
             />
             <button type="submit">Post Announcement</button>
             {message && <p>{message}</p>}
